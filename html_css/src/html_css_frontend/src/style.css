@@ -1,0 +1,95 @@
+:root {
+  --primary-color: #29abe2;
+  --bg-color: white;
+  --text-color: #333;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.container {
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Fancy button with hover effects */
+.fancy-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fancy-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(41, 171, 226, 0.3);
+}
+
+.fancy-button:active {
+  transform: translateY(1px);
+}
+
+/* CSS-only theme toggle */
+.toggle-container {
+  margin-top: 2rem;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.toggle-label:hover {
+  background-color: rgba(41, 171, 226, 0.1);
+}
+
+/* Dark theme toggle using CSS only */
+.toggle-input:checked ~ .toggle-label {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Dark theme styles */
+.toggle-input:checked ~ * {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}

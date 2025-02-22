@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "html_css_frontend": {
+      "source": ["src/html_css_frontend/"],
+      "type": "assets",
+      "workspace": "html_css_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
