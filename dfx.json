@@ -1,7 +1,6 @@
 {
   "canisters": {
     "html_frontend": {
-      "dependencies": ["html_backend"],
       "source": ["src/html_frontend/dist"],
       "type": "assets",
       "workspace": "html_frontend"
