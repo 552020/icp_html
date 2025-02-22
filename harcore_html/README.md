@@ -1,4 +1,63 @@
-# `html`
+# Hardcore HTML on ICP
+
+This project demonstrates the minimal setup needed to deploy static HTML on the Internet Computer. We started with the default dfx template (Motoko + Vanilla JS) and stripped it down to its bare essentials.
+
+## What We Removed
+
+### 1. Backend
+
+- Removed the entire backend folder containing Motoko code
+- Removed the corresponding backend canister configuration from `dfx.json`
+
+### 2. Package Management
+
+The original template had two package.json files:
+
+- Root `package.json`: Used for workspace management and global scripts
+- Frontend `package.json`: Contained frontend-specific dependencies
+
+We removed both after eliminating all dependencies:
+
+Frontend dependencies removed:
+
+- `@dfinity/agent`, `@dfinity/candid`, `@dfinity/principal`: IC JavaScript integration - not needed for static HTML
+- `lit-html`: HTML templating library - not needed for static HTML
+- `vite`: Build tool and dev server - not needed for static files
+- `typescript`: TypeScript compiler - not needed for pure HTML
+- `sass`: CSS preprocessor - not needed for basic styling
+- `vitest`, `@testing-library/jest-dom`: Testing utilities - not needed
+- `cross-fetch`: Fetch polyfill - not needed
+- `dotenv`: Environment variable management - not needed
+- `vite-plugin-environment`: Vite plugin - not needed
+
+### 3. Configuration Files
+
+- Removed `tsconfig.json` files (both root and frontend) - TypeScript configuration not needed
+- Removed `vite.config.js` - Build tool configuration not needed
+- Removed all JavaScript source files from `src/`
+
+### 4. Build Output Directory
+
+In the default template, the source directory is set to `src/html_frontend/dist`. This `dist` directory is used because:
+
+- It's the output directory for Vite's build process
+- It contains compiled/bundled files:
+  - Transpiled JavaScript from TypeScript
+  - Processed CSS from SCSS
+  - Optimized assets
+  - Generated HTML with injected build-time variables
+
+Since we're not using any build tools or preprocessing, we changed the source directory in `dfx.json` to point directly to `src/html_frontend`. This means:
+
+- No build step needed
+- Direct deployment of our static files
+- What you write is what gets deployed
+
+## What Remains
+
+The minimal structure needed to deploy HTML on ICP:
+
+## Deafu
 
 Welcome to your new `html` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
