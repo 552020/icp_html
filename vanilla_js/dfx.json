@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "vanilla_js_frontend": {
+      "source": ["src/vanilla_js_frontend"],
+      "type": "assets",
+      "workspace": "vanilla_js_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
