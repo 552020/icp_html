@@ -1,0 +1,13 @@
+{
+  "name": "html_scss",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sass:watch": "sass src/style.scss:src/style.css --watch",
+    "sass:build": "sass src/style.scss:src/style.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}

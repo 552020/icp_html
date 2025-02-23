@@ -1,0 +1,46 @@
+@use "sass:color";
+
+// Variables
+$primary-color: #29abe2;
+$accent-color: #8a2be2;
+
+// Test styles to verify SCSS features
+.test-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 3px solid $primary-color;
+  text-align: center;
+
+  // Nesting
+  h1 {
+    color: $primary-color;
+  }
+
+  // Nested with &
+  span {
+    color: $accent-color;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Button with SCSS features
+  .test-button {
+    background: $primary-color;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      // Using the newer color.adjust function instead of darken
+      background: color.adjust($primary-color, $lightness: -10%);
+    }
+  }
+}

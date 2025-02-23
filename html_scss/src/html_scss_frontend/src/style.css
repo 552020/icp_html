@@ -1,0 +1,32 @@
+.test-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 3px solid #29abe2;
+  text-align: center;
+}
+.test-container h1 {
+  color: #29abe2;
+}
+.test-container span {
+  color: #8a2be2;
+  font-weight: bold;
+}
+.test-container span:hover {
+  text-decoration: underline;
+}
+.test-container .test-button {
+  background: #29abe2;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.test-container .test-button:hover {
+  transform: scale(1.1);
+  background: rgb(25.7777777778, 141.3333333333, 190.2222222222);
+}
+
+/*# sourceMappingURL=style.css.map */
